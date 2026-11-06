@@ -1,0 +1,135 @@
+.asm-solver {
+  min-width: 420px;
+  max-width: 520px;
+  width: 90vw;
+}
+
+.asm-solver__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.asm-solver__title svg {
+  flex-shrink: 0;
+}
+
+.asm-solver__body {
+  padding: 14px 16px 16px !important;
+  gap: 12px !important;
+}
+
+.asm-solver__hint {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.asm-solver__input {
+  width: 100%;
+  min-height: 100px;
+  max-height: 220px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-editor);
+  color: var(--text-primary);
+  font-family: var(--font-mono, Consolas, monospace);
+  font-size: 12.5px;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.asm-solver__input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.15);
+}
+
+.asm-solver__input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.asm-solver__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.asm-solver__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asm-solver__shortcut {
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.asm-solver__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.asm-solver__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.12s, border-color 0.12s, opacity 0.12s;
+  white-space: nowrap;
+}
+
+.asm-solver__btn--cancel {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.asm-solver__btn--cancel:hover {
+  background: var(--bg-button-hover);
+  color: var(--text-primary);
+}
+
+.asm-solver__btn--solve {
+  background: #7c3aed;
+  border: 1px solid #7c3aed;
+  color: #fff;
+  font-weight: 600;
+}
+
+.asm-solver__btn--solve:hover:not(:disabled) {
+  background: #6d28d9;
+  border-color: #6d28d9;
+}
+
+.asm-solver__btn--solve:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Spinner animation */
+.asm-solver__spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: asmSpin 0.6s linear infinite;
+}
+
+@keyframes asmSpin {
+  to { transform: rotate(360deg); }
+}

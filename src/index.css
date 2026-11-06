@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Light theme (classic Notepad) */
+  --bg-app: #f0f0f0;
+  --bg-window: #ffffff;
+  --bg-menu: #f0f0f0;
+  --bg-menu-hover: #cce8ff;
+  --bg-menu-active: #99d1ff;
+  --bg-dropdown: #f0f0f0;
+  --bg-dropdown-hover: #cce8ff;
+  --bg-editor: #ffffff;
+  --bg-statusbar: #f0f0f0;
+  --bg-tab: #dcdcdc;
+  --bg-tab-active: #ffffff;
+  --bg-tab-hover: #e8e8e8;
+  --bg-titlebar: #f0f0f0;
+  --bg-scrollbar: #f0f0f0;
+  --bg-scrollbar-thumb: #c1c1c1;
+  --bg-dialog: #f0f0f0;
+  --bg-input: #ffffff;
+  --bg-button: #e1e1e1;
+  --bg-button-hover: #cce8ff;
+  --bg-button-active: #99d1ff;
+
+  --text-primary: #000000;
+  --text-secondary: #444444;
+  --text-menu: #000000;
+  --text-disabled: #a0a0a0;
+  --text-tab: #444444;
+  --text-tab-active: #000000;
+
+  --border-color: #d4d4d4;
+  --border-active: #0078d4;
+  --border-menu: #cccccc;
+  --border-input: #7a7a7a;
+  --border-button: #a0a0a0;
+
+  --accent: #0078d4;
+  --accent-hover: #106ebe;
+  --shadow: 0 2px 8px rgba(0,0,0,0.15);
+  --shadow-menu: 2px 2px 8px rgba(0,0,0,0.2);
+
+  --font-ui: 'Segoe UI', system-ui, sans-serif;
+  --font-editor: 'Consolas', 'Courier New', monospace;
+  --font-size-ui: 12px;
+  --font-size-editor: 15px;
+
+  --scrollbar-width: 12px;
+  --titlebar-height: 32px;
+  --menubar-height: 22px;
+  --tab-height: 34px;
+  --statusbar-height: 22px;
+}
+
+[data-theme="dark"] {
+  --bg-app: #1c1c1c;
+  --bg-window: #1e1e1e;
+  --bg-menu: #2d2d2d;
+  --bg-menu-hover: #3a3a3a;
+  --bg-menu-active: #444444;
+  --bg-dropdown: #2d2d2d;
+  --bg-dropdown-hover: #3d3d3d;
+  --bg-editor: #1e1e1e;
+  --bg-statusbar: #2d2d2d;
+  --bg-tab: #252525;
+  --bg-tab-active: #1e1e1e;
+  --bg-tab-hover: #2e2e2e;
+  --bg-titlebar: #1c1c1c;
+  --bg-scrollbar: #2d2d2d;
+  --bg-scrollbar-thumb: #555555;
+  --bg-dialog: #2d2d2d;
+  --bg-input: #3c3c3c;
+  --bg-button: #3c3c3c;
+  --bg-button-hover: #4a4a4a;
+  --bg-button-active: #555555;
+
+  --text-primary: #d4d4d4;
+  --text-secondary: #aaaaaa;
+  --text-menu: #d4d4d4;
+  --text-disabled: #666666;
+  --text-tab: #999999;
+  --text-tab-active: #d4d4d4;
+
+  --border-color: #3a3a3a;
+  --border-active: #0078d4;
+  --border-menu: #3a3a3a;
+  --border-input: #555555;
+  --border-button: #555555;
+
+  --accent: #0078d4;
+  --accent-hover: #1084d8;
+  --shadow: 0 2px 12px rgba(0,0,0,0.4);
+  --shadow-menu: 2px 2px 12px rgba(0,0,0,0.5);
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-ui);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-scrollbar);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-scrollbar-thumb);
+  border: 2px solid var(--bg-scrollbar);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+::-webkit-scrollbar-corner {
+  background: var(--bg-scrollbar);
+}

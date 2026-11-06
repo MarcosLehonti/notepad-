@@ -1,0 +1,17 @@
+{
+  "name": "Notepad++ Web Edition",
+  "short_name": "Notepad++",
+  "description": "Notepad++ en la web con soporte de sintaxis para Ensamblador, JavaScript, Python y más",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#202020",
+  "theme_color": "#202020",
+  "icons": [
+    {
+      "src": "/notepad.svg",
+      "sizes": "32x32 48x48 96x96 192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

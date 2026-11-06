@@ -1,0 +1,108 @@
+.menubar {
+  display: flex;
+  align-items: stretch;
+  height: var(--menubar-height);
+  background: var(--bg-menu);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 2px;
+  position: relative;
+  z-index: 100;
+  user-select: none;
+}
+
+.menubar__item {
+  position: relative;
+}
+
+.menubar__btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-menu);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font-ui);
+  outline: none;
+  white-space: nowrap;
+  border-radius: 2px;
+  transition: background 0.08s;
+}
+
+.menubar__btn:hover,
+.menubar__btn--active {
+  background: var(--bg-menu-hover);
+}
+
+.menubar__btn--active {
+  background: var(--bg-menu-active);
+}
+
+.menubar__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--bg-dropdown);
+  border: 1px solid var(--border-menu);
+  box-shadow: var(--shadow-menu);
+  z-index: 1000;
+  padding: 2px 0;
+  animation: dropdownIn 0.08s ease;
+}
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.menubar__dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 20px 4px 24px;
+  border: none;
+  background: transparent;
+  color: var(--text-menu);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font-ui);
+  text-align: left;
+  white-space: nowrap;
+  outline: none;
+  transition: background 0.06s;
+  gap: 24px;
+}
+
+.menubar__dropdown-item:hover {
+  background: var(--bg-dropdown-hover);
+}
+
+.menubar__dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menubar__check {
+  display: inline-block;
+  width: 14px;
+  margin-left: -14px;
+  font-size: 11px;
+  color: var(--text-primary);
+}
+
+.menubar__shortcut {
+  color: var(--text-secondary);
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.menubar__sep {
+  height: 1px;
+  background: var(--border-color);
+  margin: 3px 0;
+}

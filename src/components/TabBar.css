@@ -1,0 +1,138 @@
+.tabbar {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background: var(--bg-tab);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  user-select: none;
+}
+
+.tabbar__tabs {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  height: 100%;
+}
+
+.tabbar__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabbar__tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  min-width: 90px;
+  max-width: 220px;
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-tab);
+  color: var(--text-tab);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.1s, color 0.1s;
+  flex-shrink: 0;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.tabbar__tab:hover {
+  background: var(--bg-tab-hover);
+}
+
+.tabbar__tab--active {
+  background: var(--bg-tab-active);
+  color: var(--text-tab-active);
+  font-weight: 500;
+  border-top: 3px solid #6cd8a4; /* Notepad++ mint green active tab stripe */
+  padding-top: 0px;
+}
+
+.tabbar__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tabbar__tab-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.2px;
+}
+
+.tabbar__pin {
+  font-size: 9px;
+  opacity: 0.35;
+  transition: opacity 0.15s;
+  margin-left: 2px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.tabbar__pin:hover {
+  opacity: 0.9;
+}
+
+.tabbar__tab-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: transparent;
+  color: var(--text-tab);
+  cursor: pointer;
+  font-size: 9px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.1s, background 0.1s, color 0.1s;
+  outline: none;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.tabbar__tab:hover .tabbar__tab-close,
+.tabbar__tab--active .tabbar__tab-close {
+  opacity: 0.8;
+}
+
+.tabbar__tab-close:hover {
+  background: #e81123;
+  color: white;
+  opacity: 1;
+}
+
+.tabbar__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: background 0.1s, color 0.1s;
+  outline: none;
+  margin-left: 2px;
+  border-radius: 3px;
+}
+
+.tabbar__new:hover {
+  background: var(--bg-tab-hover);
+  color: var(--text-primary);
+}
